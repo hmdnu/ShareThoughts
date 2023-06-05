@@ -20,7 +20,9 @@ function LoginPage() {
   }, []);
 
   useEffect(() => {
-    if (status === "authenticated") router.push("/");
+    if (status === "authenticated") {
+      router.push("/");
+    }
   }, [status, router]);
 
   return (
