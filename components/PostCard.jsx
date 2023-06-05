@@ -39,7 +39,7 @@ export default function PostCards({ setUserPosts, posts, setPosts, isEmpty, setP
                   <Link href={`profile/${post.creator._id}`} className="hover:text-blue-300 cursor-pointer font-semibold sm:text-base text-sm">
                     {post.creator.username}
                   </Link>
-                  <h2 className="text-gray-400 sm:text-sm text-xs flex flex-wrap font-medium">{post.creator.email}</h2>
+                  <h2 className="text-gray-400 sm:text-sm text-xs font-medium">{post.creator.email}</h2>
                 </div>
               </div>
               <p className="sm:text-base text-sm">{post.post}</p>

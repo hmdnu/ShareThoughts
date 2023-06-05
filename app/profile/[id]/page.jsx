@@ -52,7 +52,7 @@ export default function MyProfile({ params }) {
   return (
     <>
       <Navbar />
-      <section className="mt-24 md:w-[50%] w-[80%] m-auto">
+      <section className="mt-24 md:w-[50%] w-[90%] m-auto">
         <h1 className="font-bold md:text-2xl text-xl">Profil</h1>
 
         <Profile user={user} isLoading={isLoading} />
