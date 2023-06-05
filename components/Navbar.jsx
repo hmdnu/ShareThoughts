@@ -40,7 +40,7 @@ export default function Navbar() {
       {/* mobile nav */}
 
       <div className="cursor-pointer max-sm:flex absolute hidden top-5 right-11" onClick={() => setToggleDropdown((prev) => !prev)}>
-        <Image src={session?.user.image} width={50} height={50} alt="profile" className="rounded-full" />
+        <Image src={session?.user.image} width={40} height={40} alt="profile" className="rounded-full" />
       </div>
       {toggleDropdown && (
         <div className="sm:hidden flex flex-col w-[120px] bg-slate-200 rounded-xl px-2 py-4 absolute right-10">

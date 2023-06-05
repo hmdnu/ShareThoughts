@@ -30,17 +30,19 @@ export default function PostCards({ setUserPosts, posts, setPosts, isEmpty, setP
       ) : (
         <>
           {posts.map((post) => (
-            <div key={post._id} className="mt-5 bg-slate-100 p-5 rounded-xl flex items-center gap-5 relative">
-              <Link href={`profile/${post.creator._id}`}>
-                <Image src={post.creator.image} alt="profile" width={40} height={40} className="rounded-full" />
-              </Link>
-              <div>
-                <Link href={`profile/${post.creator._id}`} className="hover:text-blue-300 cursor-pointer">
-                  <h1 className="font-semibold">{post.creator.username}</h1>
+            <div key={post._id} className="mt-5 bg-slate-100 p-5 rounded-xl flex flex-col  relative gap-3">
+              <div className="flex items-center gap-3 pb-4 border-b-[1px]  border-slate-300">
+                <Link href={`profile/${post.creator._id}`}>
+                  <Image src={post.creator.image} alt="profile" width={45} height={45} className="rounded-full" />
                 </Link>
-                <h2 className="text-gray-400 font-light text-sm">{post.creator.email}</h2>
-                <p className="mt-1 sm:text-base text-sm">{post.post}</p>
+                <div>
+                  <Link href={`profile/${post.creator._id}`} className="hover:text-blue-300 cursor-pointer font-semibold sm:text-base text-sm">
+                    {post.creator.username}
+                  </Link>
+                  <h2 className="text-gray-400 sm:text-sm text-xs flex flex-wrap font-medium">{post.creator.email}</h2>
+                </div>
               </div>
+              <p className="sm:text-base text-sm">{post.post}</p>
               <button className="absolute top-2 right-5 w-[20px] h-[20px] cursor-pointer text-lg font-bold" onClick={() => handleOpenModal(post)}>
                 ...
               </button>
