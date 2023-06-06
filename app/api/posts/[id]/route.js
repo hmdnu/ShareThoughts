@@ -1,5 +1,6 @@
 import { connectToDB } from "@util/database";
 import Post from "@models/post";
+import User from "@models/user";
 
 // get post
 export async function GET(req, { params }) {
