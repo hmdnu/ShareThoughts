@@ -19,11 +19,9 @@ function LoginPage() {
     setUpProvider();
   }, []);
 
-  useEffect(() => {
-    if (status === "authenticated") {
-      router.push("/");
-    }
-  }, [status, router]);
+  if (status === "authenticated") {
+    router.push("/");
+  }
 
   return (
     <section className="bg-slate-700 h-[100vh] w-full grid place-content-center">
