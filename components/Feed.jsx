@@ -22,7 +22,9 @@ export default function Feed() {
         const res = await fetch("/api/posts");
         const post = await res.json();
 
-        if (post.length === 0) setIsEmpty(true);
+        if (post.length === 0) {
+          setIsEmpty(true);
+        }
 
         setPosts(post);
       } catch (error) {
